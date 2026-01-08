@@ -1,0 +1,51 @@
+.location-permission {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.location-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.location-btn:hover:not(:disabled) {
+  background-color: #1e3a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.4);
+}
+
+.location-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-red);
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  background-color: rgba(220, 38, 38, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+.location-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.location-status.success {
+  color: var(--success);
+  background-color: rgba(16, 185, 129, 0.1);
+}

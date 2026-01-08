@@ -1,0 +1,242 @@
+.first-aid-page {
+  width: 100%;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-red);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+.first-aid-disclaimer {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-left: 4px solid var(--primary-red);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.first-aid-disclaimer p {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.first-aid-disclaimer strong {
+  color: var(--primary-red);
+}
+
+.first-aid-guides {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.first-aid-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.first-aid-card:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.first-aid-card-header {
+  width: 100%;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+  gap: 1rem;
+}
+
+.first-aid-card-header:hover {
+  background-color: var(--bg-light);
+}
+
+.guide-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.guide-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.first-aid-card-header h2 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin: 0;
+  font-weight: 600;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.first-aid-steps {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  counter-reset: step-counter;
+}
+
+.step-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  counter-increment: step-counter;
+  position: relative;
+  padding-left: 3.5rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  position: absolute;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary-red);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  top: 0.25rem;
+}
+
+.step-text {
+  flex: 1;
+  color: var(--text-dark);
+  line-height: 1.8;
+  font-size: 1rem;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding-top: 0.125rem;
+}
+
+.step-item:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .first-aid-card-header {
+    padding: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .first-aid-card-header h2 {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .guide-header-content {
+    gap: 0.75rem;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .guide-icon {
+    flex-shrink: 0;
+  }
+
+  .guide-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .first-aid-steps {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  .step-item {
+    padding-left: 3rem;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .step-number {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.85rem;
+    top: 0.125rem;
+  }
+
+  .step-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-aid-card-header {
+    padding: 1rem;
+  }
+
+  .first-aid-card-header h2 {
+    font-size: 1rem;
+  }
+
+  .step-item {
+    padding-left: 2.75rem;
+    gap: 0.5rem;
+  }
+
+  .step-number {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .step-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
