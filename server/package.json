@@ -6,7 +6,8 @@
     "scripts": {
         "start": "node index.js",
         "dev": "nodemon index.js",
-        "init-db": "node database_init.js"
+        "init-db": "node database_init.js",
+        "build": "echo 'No build step required for backend'"
     },
     "dependencies": {
         "bcryptjs": "^2.4.3",
