@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { UserPlus, User, Droplet, Phone, AlertTriangle } from 'lucide-react';
@@ -41,6 +42,10 @@ const Register = () => {
 
     return (
         <div className="auth-page">
+            <Helmet>
+                <title>Register - MediAid</title>
+                <meta name="description" content="Create a MediAid account to save your medical history and emergency contacts for quick access during emergencies." />
+            </Helmet>
             <div className="auth-container register-container">
                 <div className="auth-header">
                     <UserPlus size={40} className="auth-icon" />

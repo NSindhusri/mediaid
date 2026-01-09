@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { ChevronDown, ChevronUp, Heart, Droplet, Flame, Wind, Bone } from 'lucide-react'
 import './FirstAid.css'
 
@@ -89,6 +90,10 @@ const FirstAid = () => {
 
   return (
     <div className="first-aid-page">
+      <Helmet>
+        <title>Emergency First Aid Guide - MediAid</title>
+        <meta name="description" content="Quick reference guides for common medical emergencies like CPR, bleeding, burns, choking, and fractures." />
+      </Helmet>
       <div className="page-header">
         <h1>Emergency First Aid Guide</h1>
         <p>Quick reference guide for common emergencies. Stay calm and follow the steps.</p>
@@ -96,8 +101,8 @@ const FirstAid = () => {
 
       <div className="first-aid-disclaimer">
         <p>
-          <strong>Important:</strong> These guides are for informational purposes only. 
-          Always call emergency services (108) first in any medical emergency. 
+          <strong>Important:</strong> These guides are for informational purposes only.
+          Always call emergency services (108) first in any medical emergency.
           These guides do not replace professional medical training.
         </p>
       </div>

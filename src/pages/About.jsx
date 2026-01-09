@@ -1,9 +1,14 @@
+import { Helmet } from 'react-helmet-async'
 import { Shield, Heart, Zap, Users } from 'lucide-react'
 import './About.css'
 
 const About = () => {
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About Us - MediAid Mission</title>
+        <meta name="description" content="Learn about MediAid's mission to provide immediate access to emergency health services and connect communities for better healthcare." />
+      </Helmet>
       <div className="about-hero">
         <h1>About MediAid</h1>
         <p className="about-tagline">Your Trusted Emergency Health Information Platform</p>
@@ -12,8 +17,8 @@ const About = () => {
       <div className="about-section">
         <h2>Our Mission</h2>
         <p>
-          MediAid is dedicated to providing immediate access to emergency health services 
-          when every second counts. We believe that in critical situations, quick access 
+          MediAid is dedicated to providing immediate access to emergency health services
+          when every second counts. We believe that in critical situations, quick access
           to medical information and services can save lives.
         </p>
       </div>
@@ -89,15 +94,15 @@ const About = () => {
       <div className="about-section disclaimer">
         <h2>Important Disclaimer</h2>
         <p>
-          MediAid is an information platform designed to assist users in finding emergency 
-          health services. This platform does not provide medical advice, diagnosis, or 
-          treatment. In case of a medical emergency, always call your local emergency 
+          MediAid is an information platform designed to assist users in finding emergency
+          health services. This platform does not provide medical advice, diagnosis, or
+          treatment. In case of a medical emergency, always call your local emergency
           services (108 in India) immediately.
         </p>
         <p>
-          The information provided on this platform is for general informational purposes 
-          only and should not be used as a substitute for professional medical care. 
-          Always seek the advice of qualified health providers with any questions you 
+          The information provided on this platform is for general informational purposes
+          only and should not be used as a substitute for professional medical care.
+          Always seek the advice of qualified health providers with any questions you
           may have regarding a medical condition.
         </p>
       </div>

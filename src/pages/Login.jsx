@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { LogIn } from 'lucide-react';
@@ -24,6 +25,10 @@ const Login = () => {
 
     return (
         <div className="auth-page">
+            <Helmet>
+                <title>Login - MediAid</title>
+                <meta name="description" content="Login to your MediAid account to manage your profile and access personalized emergency services." />
+            </Helmet>
             <div className="auth-container">
                 <div className="auth-header">
                     <LogIn size={40} className="auth-icon" />

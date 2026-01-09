@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react'
 import './Contact.css'
 
@@ -30,6 +31,10 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <Helmet>
+        <title>Contact MediAid - Emergency Support</title>
+        <meta name="description" content="Get in touch with MediAid. We are here to help with your emergency health information needs." />
+      </Helmet>
       <div className="page-header">
         <h1>Contact Us</h1>
         <p>Have questions, feedback, or need assistance? We're here to help!</p>
@@ -77,8 +82,8 @@ const Contact = () => {
           <div className="emergency-notice">
             <h3>🚨 For Medical Emergencies</h3>
             <p>
-              If you are experiencing a medical emergency, please call your local 
-              emergency services (108) immediately. Do not use this contact form 
+              If you are experiencing a medical emergency, please call your local
+              emergency services (108) immediately. Do not use this contact form
               for urgent medical situations.
             </p>
           </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Search } from 'lucide-react'
 import ServiceCard from '../components/ServiceCard/ServiceCard'
 import LocationPermission, { useLocation } from '../components/LocationService/LocationService'
@@ -99,6 +100,10 @@ const Services = () => {
 
   return (
     <div className="services-page">
+      <Helmet>
+        <title>Emergency Services Directory - MediAid</title>
+        <meta name="description" content="Browse our complete directory of emergency medical services including hospitals, blood banks, pharmacies, and ambulance providers." />
+      </Helmet>
       <div className="services-header">
         <h1>Emergency Services Directory</h1>
         <p>Find and contact emergency medical services near you</p>

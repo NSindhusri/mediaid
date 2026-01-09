@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { User, Droplet, AlertTriangle, Phone, Save, Edit } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 import './Profile.css'
@@ -59,6 +60,10 @@ const Profile = () => {
   if (!user && !isEditing) {
     return (
       <div className="profile-page">
+        <Helmet>
+          <title>User Profile - MediAid</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <div className="profile-empty">
           <User size={64} />
           <h2>Please Login</h2>
@@ -221,6 +226,10 @@ const Profile = () => {
 
   return (
     <div className="profile-page">
+      <Helmet>
+        <title>Emergency Health Card - MediAid</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="profile-header">
         <h1>Emergency Health Card</h1>
         <button className="edit-btn" onClick={handleEdit}>

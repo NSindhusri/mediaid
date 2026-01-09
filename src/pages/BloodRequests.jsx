@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Plus, Phone, MapPin, Clock, Droplet } from 'lucide-react'
 import api from '../api/client'
 import { useAuth } from '../contexts/AuthContext'
@@ -74,6 +75,10 @@ const BloodRequests = () => {
 
   return (
     <div className="blood-requests-page">
+      <Helmet>
+        <title>Blood Requests & Donation - MediAid</title>
+        <meta name="description" content="Find urgent blood donation requests or post your own. Connect with donors and hospitals nearby to save lives." />
+      </Helmet>
       <div className="page-header">
         <h1>Blood Requests</h1>
         <p>Post or find blood donation requests in your area</p>

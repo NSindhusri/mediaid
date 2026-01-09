@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Search, Filter } from 'lucide-react'
 import SOSButton from '../components/SOSButton/SOSButton'
 import LocationPermission from '../components/LocationService/LocationService'
@@ -112,6 +113,14 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>MediAid - Find Nearby Emergency Health Services</title>
+        <meta
+          name="description"
+          content="Instantly locate nearby hospitals, pharmacies, blood banks, and ambulance services with MediAid. Your reliable emergency health companion."
+        />
+        <meta name="keywords" content="emergency services, hospitals nearby, pharmacies, blood banks, ambulance, health app, MediAid" />
+      </Helmet>
       <div className="home-hero">
         <h1>Emergency Health Services</h1>
         <p>Find nearby hospitals, pharmacies, blood banks, and ambulance services instantly</p>
